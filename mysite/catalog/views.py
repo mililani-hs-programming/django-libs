@@ -3,6 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 #from catalog.models import Book, Author, BookInstance, Genre
 
+
 def index(request):
     '''
 
@@ -27,3 +28,10 @@ def index(request):
     '''
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html')
+
+def books(request):
+    return render(request, 'books.html')
+
+def authors(request):
+    return render(request, 'authors.html')
+
