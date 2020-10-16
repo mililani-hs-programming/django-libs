@@ -2,4 +2,11 @@
 
 {% block content %}
   <h1>this is the authors page</h1>
+
+  {% for i in output %}
+    <p> {{ i.Output }} </p>
+  {% endfor %}
+
 {% endblock %}
+
+

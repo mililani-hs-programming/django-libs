@@ -2,4 +2,9 @@
 
 {% block content %}
   <h1>this is the books page</h1>
+
+  {% for i in input %}
+    <p> {{ i.Input }} </p>
+  {% endfor %}
+
 {% endblock %}

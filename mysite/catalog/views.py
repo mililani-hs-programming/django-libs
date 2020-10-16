@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 #from catalog.models import Book, Author, BookInstance, Genre
-
+from .models import Data
 
 def index(request):
     '''
@@ -30,8 +30,16 @@ def index(request):
     return render(request, 'index.html')
 
 def books(request):
-    return render(request, 'books.html')
+    #naming conv: var below should be nameofdatabase_var
+    data_var = Data.objects.all()
+    for i in data_var:
+       print(i.Input)
+    return render(request, 'books.html', {'input': data_var})
 
 def authors(request):
-    return render(request, 'authors.html')
+    data_var = Data.objects.all()
+    for i in data_var:
+        print(i.Output)
+    return render(request, 'authors.html', {'output': data_var})
+
 
