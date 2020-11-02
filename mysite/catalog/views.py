@@ -29,17 +29,20 @@ def index(request):
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html')
 
-def books(request):
+def departments(request):
     #naming conv: var below should be nameofdatabase_var
     data_var = Data.objects.all()
     for i in data_var:
        print(i.Input)
-    return render(request, 'books.html', {'input': data_var})
+    return render(request, 'departments.html', {'input': data_var})
 
+def applications(request):
+    return render(request, 'applications.html')
+
+'''
 def authors(request):
     data_var = Data.objects.all()
     for i in data_var:
         print(i.Output)
     return render(request, 'authors.html', {'output': data_var})
-
-
+'''
